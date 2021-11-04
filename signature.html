@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sachin Giri">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/tailwind.prod.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        @font-face {
+            font-family: "Khand";
+            src: local("Khand"),
+            url(./assets/font/Khand-Regular/khand/Khand-Regular.ttf) format("ttf");
+        }
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-indent: 1px;
+            text-overflow: '';
+        }
+        body{
+            font-family: 'Khand', Arial, Helvetica, sans-serif;
+        }
+        header{
+            background-image: url('./assets/img/header_bg4.jpg'); background-size: cover; background-position: top; background-repeat: no-repeat;
+        }
+        .id-card{
+            background-image: url('./assets/img/header_bg4.jpg'); background-size: cover; background-position: top; background-repeat: no-repeat;
+        }
+        .id-card-body{
+            background-image: url('./assets/img/bg.jpg'); background-repeat:repeat;
+        }
+        .btn-confirm{
+          background-color:#D97706;
+          border-color:#D97706;
+          color:#FFFFFF;
+          font-size:20px;
+          font-weight:600;
+          padding: 4px;
+          width: 80px;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen text-gray-900 bg-opacity-50">
+    <header style="background-color: #ED6009; color: #450000">
+        <div class="meeting-heading w-full h-full">
+            <div class="container mx-auto px-4 flex flex-col xs:flex-row justify-center space-x-1 sm:space-x-8 items-center lg:block lg:relative text-center text-base my-4 font-bold">
+
+                <div class="brand-image relative lg:absolute h-full flex flex-row items-center">
+                    <img src="./assets/img/logo1.png" alt="BJP logo" class="h-24 sm:h-28 md:h-36 lg:mt-10 2xl:h-40 2xl:mt-16 xl: bg-white rounded-full p-1.5">
+                </div>
+
+                <h1 class="brand-name text-2.5xl sm:text-4.5xl 2xl:text-6xl pt-3 xs:pt-8 pb-4 font-semibold flex flex-col lg:flex-row items-center lg:justify-center" >
+                    <!-- National Executive Meeting Bharatiya Janata Party -->
+                    <span class="min-w-max sm:min-w-0 lg:pl-28 lg:mr-1.5 xl:pl-0 xl:mr-2">
+                        National Executive Meeting
+                    </span>
+                    <span class="">
+                        Bharatiya Janata Party
+                    </span>
+                </h1>
+
+            </div>
+        </div>
+        <div class="meeting-date w-full" style="background-color: #450000;">
+            <div class="container mx-auto text-center text-2xl sm:text-3.5xl 2xl:text-4xl py-1 sm:py-2 2xl:py-3 text-white font-normal">
+                7th & 8th November 2021
+            </div>
+        </div>
+    </header>
+    <main class="flex-grow">
+        <div id="signature-popup" class="block w-full h-full">
+            <div class="lg:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto px-2 sm:px-4 h-full py-12 xl:py-20">
+                <div class="flex flex-col xl:flex-row w-full px-2 sm:px-10">
+                    <div class="id-signature py-2 w-full flex flex-col lg:flex-row justify-center lg:justify-evenly items-center">
+                        <div class="id-card font-sans w-full md:w-4/5 lg:w-1/2 xl:w-5/12 border-2 border-gray-300">
+                            <div class="card h-full border-8 border-l-0 border-r-0 border-green-700 text-center">
+                                <div class="id-card-header flex flex-col items-center py-2">
+                                    <div class="brand-image flex flex-row items-center py-3 md:py-4">
+                                        <img src="./assets/img/logo1.png" alt="BJP logo" class="h-20 md:h-24 bg-white rounded-full p-0.5">
+                                    </div>
+                                    <div class="brand-title text-2xl sm:text-3xl font-bold md:font-extrabold" style="color:#450000">
+                                        <div class="leading-tight">
+                                            National Executive Meeting <br>
+                                            Bharatiya Janata Party
+                                        </div>
+                                    </div>
+                                    <div class="brand-event-date text-lg md:text-xl min-w-max px-14 md:px-20 pb-0.5 md:py-1 my-2.5 rounded-full text-white" style="background-color:#540000">
+                                        7th November 2021
+                                    </div>
+                                </div>
+                                <div class="id-card-body flex flex-col items-center py-10">
+                                    <div class="id-profile relative mt-4 mb-8">
+                                        <div class="id-profile-image relative h-40 w-40 md:h-52 md:w-52 flex flex-row items-center rounded-full overflow-hidden border-4 border-white shadow-lg">
+                                            <img src="./assets/img/sample.jpeg" alt="Profile Photo" class="h-full w-full object-cover">
+                                        </div>
+                                        <div class="absolute -bottom-4 brand-image w-full flex justify-center items-center">
+                                            <img src="./assets/img/logo1.png" alt="BJP logo" class="h-12 md:h-14 bg-white rounded-full">
+                                        </div>
+                                    </div>
+                                    <div class="id-profile-name font-extrabold">
+                                        <h1 class="text-2.5xl md:text-4xl">Shri. Rajnath Singh</h1>
+                                    </div>
+                                    <div class="id-profile-designation text-yellow-600 font-semibold mt-2 py-1 border-2 border-l-0 border-r-0 border-yellow-500">
+                                        <h3 class="text-xl md:text-2xl leading-tight">Minister of Defence</h3>
+                                    </div>
+                                </div>
+                                <div class="id-card-footer h-8 md:h-10">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="signature w-full h-full lg:w-1/3 my-10 lg:my-0 flex flex-row items-center lg:align-middle ">
+                            <!-- <form action="GET" class="w-full h-72">
+                                <div class="input-group w-full h-full mb-4">
+                                    <div class="border-4 border-gray-300 h-full w-full"></div>
+                                </div>
+                                <div class="submit-button flex justify-center">
+                                    <button type="submit" class="px-12 pt-4 pb-2 text-3xl bg-yellow-600 hover:bg-yellow-700 text-white border-2 border-yellow-600 hover:border-yellow-700 transition-all duration-100 rounded-full outline-none cursor-pointer font-semibold hover:shadow-lg active:bg-yellow-800" >Submit</button>
+                                </div>
+                            </form> -->
+                            <form action="" class="w-full">
+                                <div class="input-group mb-4">
+                                    <signature-pad>
+                                      <canvas class="border-4 border-grey-500 w-full" style="touch-action:none;"></canvas>
+                                    </signature-pad>
+                                </div>
+                                <div class="submit-button flex justify-center ">
+                                  
+                                    <button id="SubmitButton" type="button" class="px-12 pt-4 pb-2 text-3xl bg-yellow-600 hover:bg-yellow-700 text-white border-2 border-yellow-600 hover:border-yellow-700 transition-all duration-100 rounded-full outline-none cursor-pointer font-semibold hover:shadow-lg active:bg-yellow-800" >Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+    // script to add success and error alert
+      var SubmitButton = document.getElementById('SubmitButton');
+        SubmitButton.addEventListener('click', function() {
+          // for success alert
+          Swal.fire({
+            toast: true,
+            position: 'top-end',
+            icon: 'success',
+            title: 'Welcome to Natonal Executive Meeting of Bharatiya Janata Party(2021)',
+            timer: 3000,
+            showConfirmButton: false,
+            timerProgressBar: true,
+            customClass: {
+              confirmButton:'btn btn-confirm'
+            },
+            buttonsStyling: false
+          })
+          //for error alert
+
+          //****Uncomment this to use error alertbox****
+
+          // Swal.firee({
+          //   toast: true,
+          //   position: 'top-end',
+          //   icon: 'error',
+          //   title: 'PLease sign',
+          //   //timer: 3000,
+          //   showConfirmButton: true,
+          //   timerProgressBar: false,
+          //   customClass: {
+          //     confirmButton:'btn btn-confirm'
+          //   },
+          //   buttonsStyling: false
+          // })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sachin Giri">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/tailwind.prod.css">
+    <style>
+        @font-face {
+            font-family: "Khand";
+            src: local("Khand"),
+            url(./assets/font/Khand-Regular/khand/Khand-Regular.ttf) format("ttf");
+        }
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-indent: 1px;
+            text-overflow: '';
+        }
+        body{
+            font-family: 'Khand', Arial, Helvetica, sans-serif; background-image: url('./assets/img/bg.jpg'); background-repeat:repeat;
+        }
+        header{
+            background-image: url('./assets/img/header_bg4.jpg'); background-size: cover; background-position: top; background-repeat: no-repeat;
+        }
+        .id-card{
+            background-image: url('./assets/img/header_bg4.jpg'); background-size: cover; background-position: top; background-repeat: no-repeat;
+        }
+        .id-card-body{
+            background-image: url('./assets/img/bg.jpg'); background-repeat:repeat;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen text-gray-900 bg-opacity-50">
+
+    <header style="background-color: #ED6009; color: #450000">
+        <div class="meeting-heading w-full h-full">
+            <div class="container mx-auto px-4 flex flex-col xs:flex-row justify-center space-x-1 sm:space-x-8 items-center lg:block lg:relative text-center text-base my-4 font-bold">
+
+                <div class="brand-image relative lg:absolute h-full flex flex-row items-center">
+                    <img src="./assets/img/logo1.png" alt="BJP logo" class="h-24 sm:h-28 md:h-36 lg:mt-10 2xl:h-40 2xl:mt-16 xl: bg-white rounded-full p-1.5">
+                </div>
+
+                <h1 class="brand-name text-2.5xl sm:text-4.5xl 2xl:text-6xl pt-3 xs:pt-8 pb-4 font-semibold flex flex-col lg:flex-row items-center lg:justify-center" >
+                    <!-- National Executive Meeting Bharatiya Janata Party -->
+                    <span class="min-w-max sm:min-w-0 lg:pl-28 lg:mr-1.5 xl:pl-0 xl:mr-2">
+                        National Executive Meeting
+                    </span>
+                    <span class="">
+                        Bharatiya Janata Party
+                    </span>
+                </h1>
+
+            </div>
+        </div>
+        <div class="meeting-date w-full" style="background-color: #450000;">
+            <div class="container mx-auto text-center text-2xl sm:text-3.5xl 2xl:text-4xl py-1 sm:py-2 2xl:py-3 text-white font-normal">
+                7th & 8th November 2021
+            </div>
+        </div>
+    </header>
+
+    <main class="relative flex-grow py-12 xl:py-20">
+
+        <div class="lg:max-w-screen-lg 2xl:max-w-screen-xl mx-auto px-2 sm:px-4">
+
+            <form id="main-form" method="GET" class="state-search flex space-x-10 justify-center">
+                <!-- <div class="state-select w-1/3">
+                    <select name="state" id="state" class="w-full px-4 py-3 text-lg border-2 border-gray-400 hover:border-gray-800 transition-all duration-100 rounded-full bg-white outline-none cursor-pointer font-bold" >
+                        <option value="">State</option>
+                        <option value="dl">Delhi</option>
+                        <option value="hr">Haryana</option>
+                        <option value="up">Uttar Pradesh</option>
+                        <option value="rj">Rajasthan</option>
+                        <option value="gj">Gujarat</option>
+                        <option value="mp">Madhya Pradesh</option>
+                    </select>
+                </div> -->
+                <div class="search-name w-11/12 md:w-4/5 flex space-x-6">
+                    <div class="input-group flex-grow relative">
+                        <input type="text" name="name" id="name" placeholder="Search by Name..." class="w-full px-7 pt-2 md:pt-4 pb-1 md:pb-2 text-2xl md:text-3xl border-2 border-gray-400 hover:border-gray-800 transition-all duration-100 rounded-full bg-white outline-none cursor-pointer font-semibold" autocomplete="off">
+
+                        <svg id="submit-main-form" class="absolute top-0 right-0 h-7 md:h-10 mt-2.5 md:mt-3 mr-6 cursor-pointer hover:text-yellow-600" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" ><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" class=""></path></svg>
+
+                    </div>
+
+                    <button type="submit" class="hidden lg:block px-12 pt-4 pb-2 text-2.5xl bg-red-800 hover:bg-red-900 text-white border-2 border-red-800 hover:border-red-900 transition-all duration-100 rounded-full outline-none cursor-pointer font-semibold hover:shadow-lg active:bg-red-700" >Search</button>
+                </div>
+
+            </form>
+
+            <ul class="list-none mt-14 space-y-4 md:space-y-8">
+                <li class="p-1.5 md:p-1.5 flex flex-row xl:flex-row items-center justify-between border-2 border-gray-400 hover:border-gray-800 bg-white rounded-3xl">
+                    <div class="w-7/12 md:w-8/12 flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/3 flex justify-center">
+                            <div class="h-24 w-24 2xl:h-28 2xl:w-28 rounded-full overflow-hidden">
+                                <img src="./assets/img/sample.jpeg" alt="sample alt text" class="h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-grow flex flex-col justify-center text-center md:text-left">
+                            <div class="text-2.5xl md:text-4xl 2xl:text-4.5xl font-semibold md:font-normal pt-2 pl-0 md:pt-0 md:pl-4">Shri. J P Nadda</div>
+                            <div class="text-xl md:text-2xl 2xl:text-3xl font-normal md:font-normal pt-2 pl-0 md:pt-0 md:pl-4">(BJP President)</div>
+
+                        </div>
+                    </div>
+                    <div class="w-5/12 md:w-4/12 flex justify-center">
+                        <svg class="mx-auto text-green-600 h-14 2xl:h-20 " aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" class=""></path></svg>
+                        <!-- <button class="mark-present-btn mx-auto px-4 pt-3 pb-1 md:px-10 text-xl 2xl:pt-5 2xl:pb-3 2xl:text-3xl bg-yellow-600 hover:bg-yellow-700 text-white border-2 border-yellow-600 hover:border-yellow-700 transition-all duration-100 rounded-full outline-none cursor-pointer font-semibold hover:shadow-lg active:bg-yellow-700">Mark Present</button> -->
+
+                    </div>
+                </li>
+                <li class="p-1.5 md:p-1.5 flex flex-row items-center justify-between border-2 border-gray-400 hover:border-gray-800 bg-white rounded-3xl">
+                    <div class="w-7/12 md:w-8/12 flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/3 flex justify-center">
+                            <div class="h-24 w-24 2xl:h-28 2xl:w-28 rounded-full overflow-hidden">
+                                <img src="./assets/img/sample.jpeg" alt="sample alt text" class="h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-grow flex flex-col justify-center text-center md:text-left">
+                            <div class="text-2.5xl md:text-4xl 2xl:text-4.5xl font-semibold md:font-normal pt-2 pl-0 md:pt-0 md:pl-4">YS Jagan Mohan Reddy</div>
+                            <div class="text-xl md:text-2xl 2xl:text-3xl font-normal md:font-normal pt-2 pl-0 md:pt-0 md:pl-4">(Chief Minister of Andhra Pradesh)</div>
+                        </div>
+                    </div>
+                    <div class="w-5/12 md:w-4/12 flex flex-col md:flex-row justify-center">
+                        <!-- <svg class="mx-auto text-green-600 h-14 2xl:h-20 px-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" class=""></path></svg> -->
+                        <button class="mark-present-btn mx-auto px-4 pt-3 pb-1 md:px-10 text-xl 2xl:pt-5 2xl:pb-3 2xl:text-3xl bg-yellow-600 hover:bg-yellow-700 text-white border-2 border-yellow-600 hover:border-yellow-700 transition-all duration-100 rounded-full outline-none cursor-pointer font-semibold hover:shadow-lg active:bg-yellow-700">Mark Present</button>
+
+                    </div>
+                </li>
+                <li class="p-1.5 md:p-1.5 flex flex-row xl:flex-row items-center justify-between border-2 border-gray-400 hover:border-gray-800 bg-white rounded-3xl">
+                    <div class="w-7/12 md:w-8/12 flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/3 flex justify-center">
+                            <div class="h-24 w-24 2xl:h-28 2xl:w-28 rounded-full overflow-hidden">
+                                <img src="./assets/img/sample.jpeg" alt="sample alt text" class="h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-grow flex flex-col justify-center text-center md:text-left">
+                            <div class="text-2.5xl md:text-4xl 2xl:text-4.5xl font-semibold md:font-normal pt-2 pl-0 md:pt-0 md:pl-4">Himanshu Gupta</div>
+                            <div class="text-xl md:text-2xl 2xl:text-3xl font-normal md:font-normal pt-2 pl-0 md:pt-0 md:pl-4">(BJP President)</div>
+
+                        </div>
+                    </div>
+                    <div class="w-5/12 md:w-4/12 flex justify-center">
+                        <svg class="mx-auto text-green-600 h-14 2xl:h-20 " aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" class=""></path></svg>
+                        <!-- <button class="mark-present-btn mx-auto px-4 pt-3 pb-1 md:px-10 text-xl 2xl:pt-5 2xl:pb-3 2xl:text-3xl bg-yellow-600 hover:bg-yellow-700 text-white border-2 border-yellow-600 hover:border-yellow-700 transition-all duration-100 rounded-full outline-none cursor-pointer font-semibold hover:shadow-lg active:bg-yellow-700">Mark Present</button> -->
+
+                    </div>
+                </li>
+                <li class="p-1.5 md:p-1.5 flex flex-row items-center justify-between border-2 border-gray-400 hover:border-gray-800 bg-white rounded-3xl">
+                    <div class="w-7/12 md:w-8/12 flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/3 flex justify-center">
+                            <div class="h-24 w-24 2xl:h-28 2xl:w-28 rounded-full overflow-hidden">
+                                <img src="./assets/img/sample.jpeg" alt="sample alt text" class="h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-grow flex flex-col justify-center text-center md:text-left">
+                            <div class="text-2.5xl md:text-4xl 2xl:text-4.5xl font-semibold md:font-normal pt-2 pl-0 md:pt-0 md:pl-4">Himanshu 3 Gupta</div>
+                            <div class="text-xl md:text-2xl 2xl:text-3xl font-normal md:font-normal pt-2 pl-0 md:pt-0 md:pl-4">(Chief Minister of Andhra Pradesh)</div>
+                        </div>
+                    </div>
+                    <div class="w-5/12 md:w-4/12 flex flex-col md:flex-row justify-center">
+                        <!-- <svg class="mx-auto text-green-600 h-14 2xl:h-20 px-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" class=""></path></svg> -->
+                        <button class="mark-present-btn mx-auto px-4 pt-3 pb-1 md:px-10 text-xl 2xl:pt-5 2xl:pb-3 2xl:text-3xl bg-yellow-600 hover:bg-yellow-700 text-white border-2 border-yellow-600 hover:border-yellow-700 transition-all duration-100 rounded-full outline-none cursor-pointer font-semibold hover:shadow-lg active:bg-yellow-700">Mark Present</button>
+
+                    </div>
+                </li>
+                <li class="p-1.5 md:p-1.5 flex flex-row items-center justify-between border-2 border-gray-400 hover:border-gray-800 bg-white rounded-3xl">
+                    <div class="w-7/12 md:w-8/12 flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/3 flex justify-center">
+                            <div class="h-24 w-24 2xl:h-28 2xl:w-28 rounded-full overflow-hidden">
+                                <img src="./assets/img/sample.jpeg" alt="sample alt text" class="h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-grow flex flex-col justify-center text-center md:text-left">
+                            <div class="text-2.5xl md:text-4xl 2xl:text-4.5xl font-semibold md:font-normal pt-2 pl-0 md:pt-0 md:pl-4">Suresh Singh</div>
+                            <div class="text-xl md:text-2xl 2xl:text-3xl font-normal md:font-normal pt-2 pl-0 md:pt-0 md:pl-4">(Minister of Defence)</div>
+                        </div>
+                    </div>
+                    <div class="w-5/12 md:w-4/12 flex flex-col md:flex-row justify-center">
+                        <!-- <svg class="mx-auto text-green-600 h-14 2xl:h-20 px-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" class=""></path></svg> -->
+                        <button class="mark-present-btn mx-auto px-4 pt-3 pb-1 md:px-10 text-xl 2xl:pt-5 2xl:pb-3 2xl:text-3xl bg-yellow-600 hover:bg-yellow-700 text-white border-2 border-yellow-600 hover:border-yellow-700 transition-all duration-100 rounded-full outline-none cursor-pointer font-semibold hover:shadow-lg active:bg-yellow-700">Mark Present</button>
+
+                    </div>
+                </li>
+                <li class="p-1.5 md:p-1.5 flex flex-row items-center justify-between border-2 border-gray-400 hover:border-gray-800 bg-white rounded-3xl">
+                    <div class="w-7/12 md:w-8/12 flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/3 flex justify-center">
+                            <div class="h-24 w-24 2xl:h-28 2xl:w-28 rounded-full overflow-hidden">
+                                <img src="./assets/img/sample.jpeg" alt="sample alt text" class="h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-grow flex flex-col justify-center text-center md:text-left">
+                            <div class="text-2.5xl md:text-4xl 2xl:text-4.5xl font-semibold md:font-normal pt-2 pl-0 md:pt-0 md:pl-4">Satish Goswami</div>
+                            <div class="text-xl md:text-2xl 2xl:text-3xl font-normal md:font-normal pt-2 pl-0 md:pt-0 md:pl-4">(State President)</div>
+                        </div>
+                    </div>
+                    <div class="w-5/12 md:w-4/12 flex flex-col md:flex-row justify-center">
+                        <!-- <svg class="mx-auto text-green-600 h-14 2xl:h-20 px-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" class=""></path></svg> -->
+                        <button class="mark-present-btn mx-auto px-4 pt-3 pb-1 md:px-10 text-xl 2xl:pt-5 2xl:pb-3 2xl:text-3xl bg-yellow-600 hover:bg-yellow-700 text-white border-2 border-yellow-600 hover:border-yellow-700 transition-all duration-100 rounded-full outline-none cursor-pointer font-semibold hover:shadow-lg active:bg-yellow-700">Mark Present</button>
+
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </main>
+
+    <script>
+
+        // on mobile, since the search button is not visible, search query will be submitted by taping on the Lens Icon
+        var form = document.getElementById("main-form");
+        document.getElementById("submit-main-form").addEventListener("click", function () {
+            form.submit();
+        });
+
+        //on markpresent click
+        var markPresentButtons = document.querySelectorAll('.mark-present-btn');
+
+        for (var i = 0; i < markPresentButtons.length; i++) {
+            markPresentButtons[i].addEventListener('click', function() {
+                window.location.href = './signature.html';
+            });
+        }
+
+    </script>
+</body>
+</html>

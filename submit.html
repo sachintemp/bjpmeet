@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sachin Giri">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/tailwind.prod.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title></title>
+  </head>
+  <body>
+
+
+    <script>
+      //var SubmitButton = document.getElementById('SubmitButton');
+      //  SubmitButton.addEventListener('click', function() {
+      document.addEventListener('readystatechange', event => {
+        if (event.target.readyState === "complete") {
+          Swal.fire({
+            toast: true,
+            position: 'top-end',
+            icon: 'success',
+            title: 'Thank you for being here.',
+            timer: 2500,
+            //showConfirmButton: false,
+            timerProgressBar: true,
+            customClass: {
+              confirmButton:'btn btn-confirm'
+            },
+            buttonsStyling: false
+          })
+        }
+        });
+    </script>
+  </body>
+</html>
